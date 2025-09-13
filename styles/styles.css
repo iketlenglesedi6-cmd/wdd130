@@ -1,11 +1,29 @@
-main {
-  width: 800px;
-  margin: 0 auto;
+nav {
+  background-color: steelblue;
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  padding: 10px;
+  display: block;
+}
+
+h1 {
+  color: darkblue;
 }
 
 main img {
   width: 150px;
   height: auto;
+  border: 2px solid #333;
+  padding: 5px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 aside {
