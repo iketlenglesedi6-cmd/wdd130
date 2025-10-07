@@ -1,181 +1,83 @@
 :root {
   --primary-color: #004D73;
-  --secondary-color: #0099CC;
+  --secondary-color: #007CA8; 
   --text-color: #333333;
   --background-color: #F5F5F5;
 }
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
-  color: var(--text-color);
+  margin: 0;
   background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
 }
 
-
 header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  padding: 10px 20px;
   background-color: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 header img {
-  height: 60px;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px; 
+  width: 120px;
+  height: auto;
 }
 
 nav a {
-  color: #FFF;
+  color: white;
+  margin: 0 10px;
   text-decoration: none;
+  font-weight: bold;
 }
 
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #FFF;
-  text-align: center;
-  padding: 20px;
-}
-
-.hero-overlay h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero-overlay article {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  max-width: 800px;
-}
-
-.hero-overlay article img {
-  float: right;
-  width: 150px;
-  height: auto;
-  margin-left: 20px;
+nav a:hover,
+nav a.active {
+  color: var(--secondary-color);
 }
 
 main {
   padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-section {
-  margin-bottom: 30px;
+h1, h2 {
+  color: var(--primary-color);
 }
-
-
-#adventures .adventure-figures {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-#adventures figure {
-  margin: 0;
-  text-align: center;
-  width: 18%;
-}
-
-#adventures figure img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-
-footer {
-  background-color: var(--primary-color);
-  color: #FFF;
-  text-align: center;
-  padding: 10px 0;
-}
-
-footer .socialmedia {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 20px;
-  margin-top: 10px;
-}
-
-footer .socialmedia a {
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer .socialmedia img {
-  width: 30px;
-  height: auto;
-}
-
-/* --- CONTACT PAGE STYLING --- */
 
 .contact-intro {
   text-align: center;
   margin-bottom: 30px;
 }
 
+.contact-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* --- FIXED CONTACT PAGE LAYOUT --- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 .company-info iframe {
   width: 100%;
-  height: 300px;
-  border: none;
-  margin-top: 10px;
-}
-
-.employee-grid {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
-  text-align: center;
-}
-
-.employee-grid figure {
-  width: 30%;
-}
-
-.employee-grid img {
-  width: 100%;
-  border-radius: 8px;
-  height: auto;
-}
-
-.contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  height: 250px;
+  border: 0;
 }
 
 .contact-form form {
@@ -190,23 +92,59 @@ footer .socialmedia img {
 
 .contact-form input,
 .contact-form textarea {
-  padding: 8px;
-  margin-top: 5px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin-top: 5px;
 }
 
 .contact-form button {
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  padding: 10px;
   margin-top: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .contact-form button:hover {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
+
+.employees {
+  text-align: center;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.employee-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.employee-grid figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+footer .socialmedia img {
+  width: 30px;
+  margin: 0 8px;
+}
