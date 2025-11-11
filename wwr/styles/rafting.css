@@ -1,4 +1,3 @@
-
 :root {
   --primary-color: #6D4C41;   
   --accent1-color: #D98C6C;   
@@ -8,13 +7,11 @@
   --body-font: 'Arial', sans-serif;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   font-family: var(--body-font);
@@ -22,7 +19,6 @@ body {
   background-color: var(--bg-color);
   line-height: 1.6;
 }
-
 
 header {
   display: flex;
@@ -47,11 +43,11 @@ header nav a:hover {
   color: var(--accent1-color);
 }
 
-
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
-  height: 400px; 
+  height: 350px; /* slightly shorter hero */
   overflow: hidden;
 }
 
@@ -62,13 +58,12 @@ header nav a:hover {
   display: block;
 }
 
-
 .hero h1 {
   position: absolute;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%; 
+  width: 95%; 
   background-color: rgba(109, 76, 65, 0.6);
   color: #fff;
   padding: 0.5em 1em;
@@ -78,31 +73,27 @@ header nav a:hover {
   text-align: center;
 }
 
-
-
 .hero article {
   position: absolute;
   bottom: 20px;
-  left: 5%;
-  width: 90%; 
+  left: 2.5%;
+  width: 95%; 
   background-color: rgba(250, 243, 224, 0.85);
   padding: 1em 2em;
   border-radius: 6px;
   border: 1px solid var(--accent1-color);
-  display: flex;
-  align-items: center;
-  gap: 16px; 
 }
 
 .hero article img {
-  float: none;
-  width: 150px; 
+  float: right; /* fixed float */
+  width: 150px;
   height: auto;
+  margin-left: 16px;
   border-radius: 4px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
 }
 
-
+/* Main content */
 main {
   margin-top: 32px;
   width: 90%;
@@ -128,7 +119,7 @@ section p {
   margin-bottom: 16px;
 }
 
-
+/* Footer */
 footer {
   margin-top: 48px;
   padding: 16px 40px;
@@ -154,7 +145,7 @@ footer .socialmedia a img {
   vertical-align: middle;
 }
 
-
+/* Responsive */
 @media (max-width: 900px) {
   header, main, footer {
     width: 95%;
@@ -182,7 +173,8 @@ footer .socialmedia a img {
   .hero article img {
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 16px;
+    float: none;
   }
 
   section {
