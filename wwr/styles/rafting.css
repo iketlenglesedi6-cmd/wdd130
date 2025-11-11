@@ -7,6 +7,7 @@
   --body-font: 'Arial', sans-serif;
 }
 
+/* Universal Reset */
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +21,7 @@ body {
   line-height: 1.6;
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -43,18 +45,18 @@ header nav a:hover {
   color: var(--accent1-color);
 }
 
-/* Hero Section */
+/* Hero */
 .hero {
   position: relative;
   width: 100%;
-  height: 350px; /* slightly shorter hero */
+  height: 400px;
   overflow: hidden;
 }
 
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   display: block;
 }
 
@@ -63,7 +65,7 @@ header nav a:hover {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%; 
+  width: 90%;
   background-color: rgba(109, 76, 65, 0.6);
   color: #fff;
   padding: 0.5em 1em;
@@ -76,24 +78,27 @@ header nav a:hover {
 .hero article {
   position: absolute;
   bottom: 20px;
-  left: 2.5%;
-  width: 95%; 
+  left: 5%;
+  width: 90%;
   background-color: rgba(250, 243, 224, 0.85);
   padding: 1em 2em;
   border-radius: 6px;
   border: 1px solid var(--accent1-color);
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .hero article img {
-  float: right; /* fixed float */
+  float: right;
   width: 150px;
   height: auto;
-  margin-left: 16px;
   border-radius: 4px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  margin-left: 16px;
 }
 
-/* Main content */
+/* Main Sections */
 main {
   margin-top: 32px;
   width: 90%;
@@ -136,7 +141,7 @@ footer p {
 
 footer .socialmedia {
   display: flex;
-  gap: 12px; 
+  gap: 12px;
 }
 
 footer .socialmedia a img {
@@ -153,7 +158,7 @@ footer .socialmedia a img {
   }
 
   .hero {
-    height: 300px; 
+    height: 300px;
   }
 
   .hero h1 {
@@ -171,10 +176,10 @@ footer .socialmedia a img {
   }
 
   .hero article img {
+    float: none;
     width: 100%;
     height: auto;
-    margin: 0 auto 16px;
-    float: none;
+    margin: 0 auto;
   }
 
   section {
