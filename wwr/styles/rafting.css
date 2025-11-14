@@ -1,9 +1,10 @@
-/* Universal Reset with pseudo-elements */
-*, *::before, *::after {
+/* Universal Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 /* Root Variables */
 :root {
