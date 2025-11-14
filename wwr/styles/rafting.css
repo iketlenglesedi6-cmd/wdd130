@@ -1,10 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
-/* Root Variables */
 :root {
   --primary-color: #6D4C41;   
   --accent1-color: #D98C6C;   
@@ -22,7 +22,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   display: flex;
   align-items: center;
@@ -46,7 +45,6 @@ header nav a:hover {
   color: var(--accent1-color);
 }
 
-/* Hero */
 .hero {
   position: relative;
   width: 100%;
@@ -99,7 +97,7 @@ header nav a:hover {
   margin-left: 16px;
 }
 
-/* Main Sections */
+
 main {
   margin-top: 32px;
   width: 90%;
@@ -125,7 +123,7 @@ section p {
   margin-bottom: 16px;
 }
 
-/* Footer */
+
 footer {
   margin-top: 48px;
   padding: 16px 40px;
@@ -151,7 +149,7 @@ footer .socialmedia a img {
   vertical-align: middle;
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
   header, main, footer {
     width: 95%;
