@@ -1,3 +1,10 @@
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #6D4C41;   
   --accent1-color: #D98C6C;   
@@ -5,13 +12,6 @@
   --text-color: #4E342E;     
   --heading-font: 'Verdana', sans-serif;
   --body-font: 'Arial', sans-serif;
-}
-
-/* Universal Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
