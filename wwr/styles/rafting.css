@@ -1,10 +1,11 @@
+/* Reset */
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
+/* Variables */
 :root {
   --primary-color: #6D4C41;   
   --accent1-color: #D98C6C;   
@@ -14,14 +15,16 @@
   --body-font: 'Arial', sans-serif;
 }
 
-
+/* Body */
 body {
   font-family: var(--body-font);
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -45,6 +48,7 @@ header nav a:hover {
   color: var(--accent1-color);
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
@@ -74,38 +78,41 @@ header nav a:hover {
   text-align: center;
 }
 
+/* Paragraph container under heading */
 .hero article {
   position: absolute;
-  bottom: 20px;
-  left: 5%;
+  top: 140px; /* below heading */
+  left: 50%;
+  transform: translateX(-50%);
   width: 90%;
+  max-width: 1200px;
+  height: 180px;
   background-color: rgba(250, 243, 224, 0.85);
   padding: 1em 2em;
   border-radius: 6px;
   border: 1px solid var(--accent1-color);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 16px;
+  overflow: hidden;
+}
+
+.hero article p {
+  flex: 1 1 70%;
+  overflow-y: auto;
 }
 
 .hero article img {
-  float: right;
   width: 150px;
   height: auto;
   border-radius: 4px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  order: 1; /* keep image on right */
   margin-left: 16px;
 }
 
-
-main {
-  margin-top: 32px;
-  width: 90%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+/* Sections */
 section {
   margin: 24px 0;
   padding: 12px;
@@ -116,6 +123,7 @@ section h2 {
   color: var(--primary-color);
   margin-bottom: 12px;
   font-size: 2rem;
+  text-align: center;
 }
 
 section p {
@@ -123,7 +131,63 @@ section p {
   margin-bottom: 16px;
 }
 
+/* History Layout: paragraph-image-paragraph horizontal */
+.history-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
+.history-layout p {
+  flex: 1 1 30%;
+}
+
+.history-layout img {
+  flex: 1 1 30%;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+/* Adventure Section */
+.adventure > p {
+    text-align: center;
+    max-width: 800px;  
+    margin: 0 auto 16px auto; 
+}
+
+.adventure-gallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.adventure-gallery figure {
+  flex: 1 1 18%;
+  text-align: center;
+  margin: 0;
+}
+
+.adventure-gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+}
+
+.adventure-gallery figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
+/* Footer */
 footer {
   margin-top: 48px;
   padding: 16px 40px;
@@ -149,13 +213,8 @@ footer .socialmedia a img {
   vertical-align: middle;
 }
 
-
+/* Media Queries */
 @media (max-width: 900px) {
-  header, main, footer {
-    width: 95%;
-    margin: 0 auto;
-  }
-
   .hero {
     height: 300px;
   }
@@ -168,6 +227,7 @@ footer .socialmedia a img {
   .hero article {
     position: static;
     width: 100%;
+    height: auto;
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
@@ -175,24 +235,24 @@ footer .socialmedia a img {
   }
 
   .hero article img {
-    float: none;
+    order: 0;
     width: 100%;
     height: auto;
     margin: 0 auto;
   }
 
-  section {
-    margin: 16px 0;
-    padding: 8px;
-  }
-
-  footer {
+  .history-layout {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    align-items: center;
   }
 
-  footer .socialmedia {
-    justify-content: flex-start;
+  .history-layout p, .history-layout img {
+    flex: 1 1 100%;
+    margin-bottom: 12px;
+  }
+
+  .adventure-gallery figure {
+    flex: 1 1 45%;
+    margin-bottom: 12px;
   }
 }
