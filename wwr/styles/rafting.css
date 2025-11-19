@@ -8,13 +8,9 @@
 /* Variables */
 :root {
   --primary-color: #6D4C41;   
-  --primary-color-rgb: 109, 76, 65;
   --accent1-color: #D98C6C;   
-  --accent1-color-rgb: 217, 140, 108;
   --bg-color: #FAF3E0;        
-  --bg-color-rgb: 250, 243, 224;
   --text-color: #4E342E;     
-  --text-color-rgb: 78, 52, 46;
   --heading-font: 'Verdana', sans-serif;
   --body-font: 'Arial', sans-serif;
 }
@@ -25,31 +21,23 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden; /* removes horizontal scroll */
 }
 
-/* Header (CSS Grid Layout) */
+/* Header */
 header {
   display: grid;
-  grid-template-columns: auto 1fr auto;
   align-items: center;
+  justify-content: space-between;
   padding: 16px 40px;
-  column-gap: 24px;
 }
 
 header img {
-  grid-column: 1;
   max-height: 60px;
 }
 
-header nav {
-  grid-column: 2;
-  display: flex;
-  justify-content: flex-end;
-  gap: 24px;
-}
-
 header nav a {
+  margin-left: 24px;
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
@@ -81,7 +69,7 @@ header nav a:hover {
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  background-color: rgba(var(--primary-color-rgb), 0.6);
+  background-color: rgba(109, 76, 65, 0.6);
   color: #fff;
   padding: 0.5em 1em;
   font-family: var(--heading-font);
@@ -97,7 +85,7 @@ header nav a:hover {
   transform: translateX(-50%);
   width: 95%;
   max-width: 800px;
-  background-color: rgba(var(--bg-color-rgb), 0.85);
+  background-color: rgba(250, 243, 224, 0.85);
   padding: 1em 2em;
   border-radius: 6px;
   border: 1px solid var(--accent1-color);
@@ -111,7 +99,7 @@ header nav a:hover {
   height: auto;
   border-radius: 4px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  float: right;
+  float: right; /* image on the right */
   margin-left: 16px;
 }
 
@@ -126,16 +114,16 @@ section h2 {
   color: var(--primary-color);
   margin-bottom: 12px;
   font-size: 2rem;
-  text-align: center;
+  text-align: center; /* centered headings */
 }
 
 section p {
   font-size: 1rem;
   margin-bottom: 16px;
-  text-align: center;
+  text-align: center; /* adventure paragraph centered */
 }
 
-/* History Layout */
+/* History Layout: paragraph-image-paragraph horizontal */
 .history-layout {
   display: flex;
   justify-content: space-between;
@@ -232,7 +220,7 @@ footer .socialmedia a img {
   }
 
   .hero article img {
-    float: none;
+    float: none; /* stack image below text on mobile */
     width: 100%;
     height: auto;
     margin: 0 auto;
