@@ -21,7 +21,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: hidden; /* removes horizontal scroll */
 }
 
 /* Header */
@@ -51,8 +51,8 @@ header nav a:hover {
 /* Hero Section */
 .hero {
   position: relative;
-  width: 100%;
-  height: 400px;
+  width: 100vw;
+  height: 450px;
   overflow: hidden;
 }
 
@@ -78,29 +78,20 @@ header nav a:hover {
   text-align: center;
 }
 
-/* Paragraph container under heading */
 .hero article {
   position: absolute;
-  top: 140px; /* below heading */
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  height: 180px;
+  width: 95%;
+  max-width: 800px;
   background-color: rgba(250, 243, 224, 0.85);
   padding: 1em 2em;
   border-radius: 6px;
   border: 1px solid var(--accent1-color);
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 16px;
-  overflow: hidden;
-}
-
-.hero article p {
-  flex: 1 1 70%;
-  overflow-y: auto;
 }
 
 .hero article img {
@@ -108,7 +99,7 @@ header nav a:hover {
   height: auto;
   border-radius: 4px;
   box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-  order: 1; /* keep image on right */
+  float: right; /* image on the right */
   margin-left: 16px;
 }
 
@@ -123,12 +114,13 @@ section h2 {
   color: var(--primary-color);
   margin-bottom: 12px;
   font-size: 2rem;
-  text-align: center;
+  text-align: center; /* centered headings */
 }
 
 section p {
   font-size: 1rem;
   margin-bottom: 16px;
+  text-align: center; /* adventure paragraph centered */
 }
 
 /* History Layout: paragraph-image-paragraph horizontal */
@@ -154,12 +146,6 @@ section p {
 }
 
 /* Adventure Section */
-.adventure > p {
-    text-align: center;
-    max-width: 800px;  
-    margin: 0 auto 16px auto; 
-}
-
 .adventure-gallery {
   display: flex;
   justify-content: space-between;
@@ -216,18 +202,17 @@ footer .socialmedia a img {
 /* Media Queries */
 @media (max-width: 900px) {
   .hero {
-    height: 300px;
+    height: 350px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
-    padding: 8px 16px;
+    font-size: 1.6rem;
+    padding: 6px 12px;
   }
 
   .hero article {
     position: static;
     width: 100%;
-    height: auto;
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
@@ -235,7 +220,7 @@ footer .socialmedia a img {
   }
 
   .hero article img {
-    order: 0;
+    float: none; /* stack image below text on mobile */
     width: 100%;
     height: auto;
     margin: 0 auto;
