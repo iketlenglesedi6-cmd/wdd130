@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact White Water Rafting Adventures to ask questions, make reservations, or share suggestions.">
+    <meta name="author" content="Lesedi Pride Iketleng">
+    <title>Contact Us - White Water Rafting Adventures</title>
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="White Water Rafting Company Logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Centered Company Info -->
+        <section id="company-info">
+            <h1>Contact White Water Rafting Adventures</h1>
+            <p>123 River Lane Street</p>
+            <p>KingsTown, USA</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Email: info@wwrafting.com</p>
+        </section>
+
+        <!-- Contact Form + Map -->
+        <section class="contact-layout">
+
+            <!-- Map -->
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019774948314!2d-122.4194151846818!3d37.77492977975938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e2b3d30d1%3A0x6e7f3cfb0cb0c43e!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1699812345678!5m2!1sen!2s"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Form -->
+            <div class="form-box">
+                <h2>Send Us a Message</h2>
+                <form>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <p>What is the Purpose of your Message:</p>
+                    <label><input type="radio" name="purpose" value="General Inquiry"> General Inquiry</label>
+                    <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label>
+                    <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <label><input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly
+                        newsletter</label>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- Meet Our Team -->
+        <section id="employees">
+            <h2>Meet Our Team</h2>
+
+            <div class="team-grid">
+                <figure>
+                    <img src="images/employee1.jpg" alt="Jane Doe - Lead Guide">
+                    <figcaption>Jane Doe<br>Lead Guide</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee2.jpg" alt="John Smith - Trip Coordinator">
+                    <figcaption>John Smith<br>Trip Coordinator</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/employee3.jpeg" alt="Alice Brown - Safety Officer">
+                    <figcaption>Alice Brown<br>Safety Officer</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 White Water Rafting - Lesedi Pride Iketleng</p>
+        <nav class="socialmedia">
+            <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        </nav>
+    </footer>
+
+</body>
+
+</html>
